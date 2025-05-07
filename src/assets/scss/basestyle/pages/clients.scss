@@ -1,0 +1,48 @@
+.position-heart {
+    position: relative;
+    top: 0;
+}
+
+a.info-client, a.item-client, a.sync-blocked, a.new-schedule {
+    position: relative;
+    top: 3px;
+}
+
+a.new-schedule:hover {
+    color: #459F38 !important;
+    cursor: pointer;
+}
+
+.sync-blocked {
+    opacity: 0.65;
+    cursor: not-allowed;
+}
+
+.font-badge-blocked {
+    font-size: 12px;
+}
+
+.badge-agent-list {
+    min-width: 8rem;
+}
+
+.position-badge-modal-client {
+    position: relative; 
+    top: 0px;
+    font-size: 12px !important;
+}
+
+.badge-modal-client-init {
+    position: relative; 
+    top: 0px;
+    font-size: 12px;
+    background-color: #fff !important;
+}
+
+.info-client {
+    cursor: pointer;
+}
+
+.button-event-dash {
+    float: right;
+}

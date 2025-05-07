@@ -1,0 +1,18 @@
+{
+    "name": "objetiva/gestao-contatos",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Objetiva Digital",
+            "email": "objetiva@objetiva.digital"
+        }
+    ],
+    "require": {
+        "ext-json": "*",
+        "ext-xml": "*",
+        "mailchimp/transactional": "*",
+        "spatie/image-optimizer": "^1.7.2",
+        "ext-zlib": "^8.0.0",
+        "ext-gd": "^8.0.0"
+    }
+}

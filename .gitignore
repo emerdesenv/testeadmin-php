@@ -1,0 +1,15 @@
+.env
+*.idea
+*.log
+.vscode/*
+data/
+vendor
+node_modules
+src/node_modules
+src/uploads
+src/package-lock.json
+package-lock.json
+cypress/reports
+cypress/screenshots/
+cypress/videos/
+cypress/downloads/

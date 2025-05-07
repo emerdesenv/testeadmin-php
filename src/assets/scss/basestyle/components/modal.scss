@@ -1,0 +1,14 @@
+.period-clear-icon {
+    display: none;
+    color: #aaa;
+    cursor: pointer;
+    position: absolute;
+    top: 34%;
+    right: 25px;
+    font-size: 18px;
+    transform: translateY(-50%);
+}
+
+.period-clear-icon:hover {
+    color: #000;
+}

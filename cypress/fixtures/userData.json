@@ -1,0 +1,20 @@
+{
+    "user":{
+        "usuarioSenhaCorreto":{
+            "username":"objetiva",
+            "password":"obj1987"
+        },
+        "usuarioIncorreto":{
+            "username":"obj",
+            "password":"obj1987"
+        },
+        "usuarioSemAutorizacao":{
+            "username":"TESTE_PERMISSAO",
+            "password":"obj1987"
+        },
+        "senhaIncorreta":{
+            "username":"objetiva",
+            "password":"teste123"
+        }
+    }
+}

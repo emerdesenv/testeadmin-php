@@ -1,0 +1,1 @@
+<?php require "components/basic/denied.php"; ?>

@@ -1,0 +1,21 @@
+{
+    "name": "gestao_contatos",
+    "private": true,
+    "version": "1.0.0",
+    "description": "Modulo para testes E2E",
+    "author": "Objetiva Digital",
+    "license": "ISC",
+    "scripts": {
+        "cypress-dashboard-run": "npx cypress run --browser chrome"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Objetiva-Digital/gestao-contatos.git"
+    },
+    "devDependencies": {
+        "cypress": "^14.3.2",
+        "cypress-mochawesome-reporter": "^3.8.2",
+        "cypress-multi-reporters": "^2.0.4",
+        "cypress-plugin-api": "^2.11.2"
+    }
+}

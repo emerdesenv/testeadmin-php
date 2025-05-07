@@ -1,0 +1,167 @@
+span#gauge-value-row {
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    display: flow-root;
+    left: 0;
+    margin-top: -26px;
+}
+
+#sales_at_the_time {
+    @include media-breakpoint-up(sm) {
+        display: block;
+        width: 100% !important;
+        height: 100% !important;
+    }
+    
+    @include media-breakpoint-up(md) {
+        display: block;
+        width: 100% !important;
+        height: 100% !important;
+    }
+
+    @include media-breakpoint-up(lg) {
+        display: relative;
+        width: 94% !important;
+        height: 100% !important;
+    }
+
+    @include media-breakpoint-up(xl) {
+        display: relative;
+        width: 97% !important;
+        height: 100%;
+    }
+}
+
+#sales_at_the_time,
+.card {
+    .card-header .icon-expand {
+        display: none;
+        position: absolute;
+        right: 12px;
+        top: 12px;
+        cursor: pointer;
+        color: unset;
+    }
+
+    &:hover{
+        .card-header .icon-expand {
+            @media only screen and (min-width: 481px){
+                display: inline;
+            }
+        }
+    }
+}
+
+.expanded.card-body {
+    max-width: 700 !important;
+}
+
+.card {
+    .card-header .icon-filter-map {
+        display: inline;
+        position: absolute;
+        right: 12px;
+        top: 6px;
+    }
+}
+
+.progress-bar {
+    display: unset;
+    font-weight: 500;
+    padding: 0px 0px 0px 2px;
+}
+
+span#gauge-value-row {
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    display: flow-root;
+    left: 0;
+    margin-top: -26px;
+}
+
+@media print {
+    #totals_dashboard {
+        height: 550px;
+    }
+
+    .progress-bar {
+        text-align: left;
+    }
+
+    .sales-for-day {
+        padding-bottom: 20px;
+    }
+
+    .sales-at-the-time {
+        padding-bottom: 220px;
+    }
+
+    .clients-city, .payment-type, .clients-age {
+        height: 325px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .justify-content-md-end {
+        justify-content: right !important;
+    }
+}
+
+.totals-index {
+    position: relative;
+    top: 6px;
+}
+
+@media screen and (min-width: 1368px) {
+    #sales_at_the_time {
+        width: 100% !important;
+        height: 215px  !important;
+    }
+}
+
+@media screen and (max-width: 1366px) {
+    #sales_at_the_time {
+        width: 100% !important;
+        height: 215px !important;
+    }
+}
+
+.p-2 {
+    padding: 0.8rem !important;
+}
+
+.input-date-select {
+    height: 22px !important;
+    width: 80px !important;
+    font-size: 12px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.table-condensed {
+    font-size: 14px !important;
+}
+
+.input-container {
+    position: relative;
+    display: inline-block;
+}
+
+.clear-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 18px;
+    color: #aaa;
+    display: none; /* Inicialmente escondido */
+}
+
+.clear-icon:hover {
+    color: #000; /* Muda a cor ao passar o mouse */
+}

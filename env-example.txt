@@ -1,0 +1,34 @@
+# Configurações padrões do sistema
+
+COLOR=459f38
+APP_TITLE=Sortea - Admin
+APP_NAME=Sistema Gestão do Sortea - Admin
+
+# Seta a persistência dos diretórios referente ao banco de dados
+
+PERSISTENT_APP=./src
+PERSISTENT_DB_MYSQL=./data/mysql
+PERSISTENT_DB_MARIADB=./data/mariadb
+DB_CONFIG=./config/db/.my.cnf
+
+# Configurações do MariaDB para uso com DB localhost
+
+#MYSQL_HOST=mariadb
+#MYSQL_ROOT_PASSWORD=pwd
+#MYSQL_DATABASE=sortea
+#MYSQL_USER=root
+#MYSQL_PASSWORD=pwd
+#LOG_DB=true
+
+# Configurações Mandrill
+
+MANDRILL_API_KEY=DEFINIR
+
+# Configurações de todas as logos dos produtos
+
+LOGO_AGENT_GENERAL=assets/images/general/logo_casa_dos_servidores.png 
+LOGO_AGENT_INTERNAL=assets/images/general/logo_casa_dos_servidores_light.png
+
+# Configurações para o Cypress (criar o .env dentro de src)
+CYPRESS_RECORD_KEY=00000-00000-00000-00000-000000
+CYPRESS_PROJECT_ID=00000000

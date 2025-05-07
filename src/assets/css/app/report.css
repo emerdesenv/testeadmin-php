@@ -1,0 +1,23 @@
+/* Este arquivo é chamado somente quando usamos a função printThis() em algum seletor. */
+
+@page { 
+    margin: 1cm;
+} 
+
+body {
+    background-color: white;
+    color: black;
+    font-size: 12px;
+}
+
+.modal-body {
+    padding: 0;
+}
+
+table {
+    font-size: 12px;
+}
+
+b, strong {
+    font-weight: 700 !important;			
+}

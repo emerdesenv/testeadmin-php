@@ -1,0 +1,38 @@
+{
+    "name": "gestao_contatos",
+    "private": true,
+    "version": "1.0.0",
+    "description": "Sistema para gerenciamento de Contatos",
+    "author": "Objetiva Digital",
+    "license": "ISC",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Objetiva-Digital/gestao-contatos.git"
+    },
+    "devDependencies": {
+        "gulp": "^4.0.2",
+        "gulp-clean-css": "^4.3.0",
+        "gulp-concat": "^2.6.1",
+        "gulp-rename": "^2.0.0",
+        "gulp-sass": "^5.1.0",
+        "gulp-uglify": "^3.0.2",
+        "sass": "^1.77.0"
+    },
+    "dependencies": {
+        "@popperjs/core": "^2.11.8",
+        "bootstrap": "^5.3.1",
+        "bootstrap-icons": "^1.10.5",
+        "chart.js": "4.4.3",
+        "clipboard": "^2.0.1",
+        "datatables.net-bs5": "^1.13.5",
+        "html2canvas": "^1.4.1",
+        "jquery": "^3.7.1",
+        "jquery-datatables-checkboxes": "^1.2.13",
+        "js-cookie": "^3.0.5",
+        "jspdf": "^2.5.1",
+        "natives": "^1.1.6",
+        "summernote": "^0.9.1",
+        "tippy.js": "^6.3.7",
+        "toastr": "^2.1.4"
+    }
+}

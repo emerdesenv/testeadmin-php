@@ -1,0 +1,81 @@
+.card-totals span.circle {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+}
+  
+.card-totals span.circle:before {
+    font-size: 24px;
+    position: relative;
+    top: 12px;
+}
+  
+.card-totals .status-0 .border-left {
+    border-left-width: 10px !important;
+    border-color: #4B89FC !important;
+}
+  
+.card-totals .status-0 span.circle {
+    background-color: #c8dbfe;
+    color: #4B89FC;
+}
+  
+.card-totals .status-0 .progress-bar {
+    background-color: #4B89FC;
+}
+  
+.card-totals .status-1 .border-left {
+    border-left-width: 10px !important;
+    border-color: #69BA6D !important;
+}
+  
+.card-totals .status-1 span.circle {
+    background-color: #c0e2c2;
+    color: #69BA6D;
+}
+  
+.card-totals .status-1 .progress-bar {
+    background-color: #69BA6D;
+}
+  
+.card-totals .status-2 .border-left {
+    border-left-width: 10px !important;
+    border-color: #FBB357 !important;
+}
+  
+.card-totals .status-2 span.circle {
+    background-color: #feebd4;
+    color: #FBB357;
+}
+  
+.card-totals .status-2 .progress-bar {
+    background-color: #FBB357;
+}
+
+.card-totals .status-3 .border-left {
+    border-left-width: 10px !important;
+    border-color: #EA585A !important;
+}
+  
+.card-totals .status-3 span.circle {
+    background-color: #f8c9ca;
+    color: #EA585A;
+}
+  
+.card-totals .status-3 .progress-bar {
+    background-color: #EA585A;
+}
+
+.card-totals .status-4 .border-left {
+    border-left-width: 10px !important;
+    border-color: #e97938 !important;
+}
+
+.card-totals .status-4 span.circle {
+    background-color: #e99a3826;
+    color: #e97938;
+}
+  
+.card-totals .status-4 .progress-bar {
+    background-color: #e97938;
+}

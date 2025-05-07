@@ -1,0 +1,37 @@
+/*------------------------------------------------------------------
+[Table of contents]
+
+1. Font Weights
+2. Whitespace Normal
+4. Shapes
+5. Borders
+
+-------------------------------------------------------------------*/
+
+/* Font Weights */
+.weight-300 {
+	font-weight: 300;
+}
+.weight-400 {
+	font-weight: 400;
+}
+
+/* Whitespace Normal */
+.whitespace-normal {
+    white-space: normal;
+}
+
+/* Shapes */
+.circle {
+    border-radius: 100px !important;
+}
+
+.border-width-medium {
+    border-width: 3px !important;
+}
+
+hr {
+    &.dashed{
+        border-style: dashed;
+    }
+}
