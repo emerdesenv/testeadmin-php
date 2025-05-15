@@ -26,8 +26,8 @@ MANDRILL_API_KEY=DEFINIR
 
 # Configurações de todas as logos dos produtos
 
-LOGO_AGENT_GENERAL=assets/images/general/logo_casa_dos_servidores.png 
-LOGO_AGENT_INTERNAL=assets/images/general/logo_casa_dos_servidores_light.png
+LOGO_AGENT_GENERAL=assets/images/general/logo.png 
+LOGO_AGENT_INTERNAL=assets/images/general/logo.png
 
 # Configurações para o Cypress (criar o .env dentro de src)
 CYPRESS_RECORD_KEY=00000-00000-00000-00000-000000

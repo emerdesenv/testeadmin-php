@@ -91,18 +91,6 @@ span#gauge-value-row {
     .progress-bar {
         text-align: left;
     }
-
-    .sales-for-day {
-        padding-bottom: 20px;
-    }
-
-    .sales-at-the-time {
-        padding-bottom: 220px;
-    }
-
-    .clients-city, .payment-type, .clients-age {
-        height: 325px;
-    }
 }
 
 @media screen and (max-width: 767px) {
@@ -114,20 +102,6 @@ span#gauge-value-row {
 .totals-index {
     position: relative;
     top: 6px;
-}
-
-@media screen and (min-width: 1368px) {
-    #sales_at_the_time {
-        width: 100% !important;
-        height: 215px  !important;
-    }
-}
-
-@media screen and (max-width: 1366px) {
-    #sales_at_the_time {
-        width: 100% !important;
-        height: 215px !important;
-    }
 }
 
 .p-2 {

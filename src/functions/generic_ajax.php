@@ -16,7 +16,7 @@
             $have_settings = (isset(SETTINGS[$url_page]) and count(SETTINGS[$url_page]) > 0) ? true : false;
         }
 
-        if($url_page == "clients") {
+        if($url_page == "teste") {
             $id_agent_client = isset($_SESSION["agent_client"]["id"]) ? $_SESSION["agent_client"]["id"] : $_SESSION["id_agent"];
 
             $sql_data_color = $GenericService->getParameterContent("#fff", $id_agent_client);

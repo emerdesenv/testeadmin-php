@@ -1,20 +1,18 @@
 <?php
     // Telas que possuem listagem
     CONST TABLE_LIST_PAGES = [
-        "users", "permissions", "activities", "agents", "texts", "clients"
+        "users", "permissions", "activities", "agents", "texts"
     ];
 
     // Telas que é permitido adicionar
     CONST BT_ADD = [
-        "users", "permissions", "activities", "agents", "texts", "clients", "index"
+        "users", "permissions", "activities", "agents", "texts", "index"
     ];
 
     // Telas que possuem algum tipo de filtro
     CONST FILTER_PAGES = [
-        ""          => ["agent"],
-        "index"     => ["agent"],
-        "clients"   => ["clients"],
-        "schedules" => ["schedules"]
+        ""      => ["agent"],
+        "index" => ["agent"]
     ];
 
     //Status para badge do Uusário
@@ -38,7 +36,7 @@
 
     // Telas que possuem algum tipo de filtro
     CONST FILTERS = [
-        "site", "clients"
+        ""
     ];
 
     // Padrão de extensões aceitas

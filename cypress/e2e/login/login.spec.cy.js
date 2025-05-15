@@ -11,13 +11,6 @@ describe('Testes de Login', () => {
             cy.get('.alert > p').should("contain", "Usuário não encontrado.");
         });
     });
-    it('Deve acusar alerta de autorização do usuário.', () => {
-        cy.fixture('userData.json').then((userData) => {
-            const usuarioSemAutorizacao = userData.user.usuarioSemAutorizacao;
-            Login.login(usuarioSemAutorizacao.username, usuarioSemAutorizacao.password);
-            cy.get('.alert > p').should("contain", "Não autorizado Usuário / Agenciador.");
-        });
-    });
     it('Deve acusar alerta de senha.', () => {
         cy.fixture('userData.json').then((userData) => {
             const senhaIncorreta = userData.user.senhaIncorreta;

@@ -18,7 +18,7 @@
                         </div>
                     <?php } ?>
 
-                    <?php if(in_array("clients", FILTER_PAGES[$page_url])) { ?>
+                    <?php if(in_array("teste", FILTER_PAGES[$page_url])) { ?>
                         <div class="mb-3 col-md-12">
                             <label class="form-label" for="idUsuarioFiltro">Usuário</label>
                             <select name="idUsuarioFiltro" id="idUsuarioFiltro" class="form-control select-user-filter" style="width: 100%;">

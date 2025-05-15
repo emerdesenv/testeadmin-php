@@ -86,7 +86,7 @@ $(function() {
     $("body").on("change", ".dataTable input[type='checkbox']", function () {
         $inputs = $(".dataTable tbody input[type='checkbox']:checked");
 
-        if(generic != "agents" && generic != "clients" && generic != "users" && generic != "states") {
+        if(generic != "agents" && generic != "users") {
             $(".dataTables_wrapper select.bulk-actions").attr("disabled", !($inputs.length > 1));
         }
     });
@@ -131,7 +131,7 @@ $(function() {
 
     var checkboxes = "";
   
-    if(generic != "index" && generic != "agents" && generic != "clients" && generic != "users" && generic != "activities") {
+    if(generic != "index" && generic != "agents" && generic != "users" && generic != "activities") {
         checkboxes = "checkboxes";
     }
 
@@ -139,8 +139,8 @@ $(function() {
         dom        : '<"top">rt<"bottom"lpi>',
         order      : order,
         paging     : paging_dt,
-        processing : (generic == "clients") ? true : false,
-        serverSide : (generic == "clients") ? true : false,
+        processing : (generic == "teste") ? true : false,
+        serverSide : (generic == "teste") ? true : false,
         ajax       : "pages/"+generic+"/controller.php",
         language   : { 
             url: "assets/i18n/pt-br.json",
@@ -169,7 +169,7 @@ $(function() {
         initComplete: function() {
             $(".content.loading").removeClass("loading");
 
-            if(generic != "agents" && generic != "clients" && generic != "states" && generic != "activities" && generic != "users" && generic != "activities") {
+            if(generic != "agents" && generic != "activities" && generic != "users" && generic != "activities") {
                 var $select = $("<select />", {
                     class    : "custom-select custom-select-sm form-control form-control-sm bulk-actions",
                     disabled : true,
@@ -283,7 +283,7 @@ $(function() {
 
     // Busca por texto em toda a tabela
     $(".search-all").on("keyup", function (e) {
-        if(e.keyCode == 13 && (generic == "clients") || generic != "clients") {
+        if(e.keyCode == 13 && (generic == "teste") || generic != "teste") {
             $datatable.search(this.value).draw();
 
             if(this.value == "") {
@@ -407,7 +407,7 @@ $(function() {
                 edit = "<a class='dropdown-item edit' href='#'>Editar</a>";
             }
 
-            if(generic != "clients" && generic != "agents" && table_options.includes("delete") && checkPermissions($row[0], "exclusao")) {
+            if(generic != "teste" && generic != "agents" && table_options.includes("delete") && checkPermissions($row[0], "exclusao")) {
                 del = "<a class='dropdown-item delete text-danger' href='#'>Deletar</a>";
             }
 

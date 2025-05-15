@@ -4,8 +4,7 @@ var GraphicObj = {
         ""      : []
     },
     graphics_size: [
-        "sales_for_hour_editions", "sales_last_editions", "registers_week_active", "sales_last_editions_cumulative", "payment_type",
-        "sales_for_day", "sales_on_day", "sales_for_edition", "sales_for_day_period", "clients_city", "clients_age", "payment_gateway", "payment_origin"
+        ""
     ],
     initialize: function() {
         var url = location.href.replace("#", "");
@@ -30,13 +29,13 @@ var GraphicObj = {
                 graphic.update();
             }
 
-            if(canv_id != "sales_at_the_time") {
+            if(canv_id != "teste") {
                 var graphic = eval("chart_"+canv_id);
 
                 if(!$(this).closest(".card").hasClass("expanded")) {
                     graphic.canvas.parentNode.style.width = '100%';
 
-                    if(canv_id == "sales_for_edition" || canv_id == "sales_for_day_period") {
+                    if(canv_id == "teste_a" || canv_id == "teste_b") {
                         graphic.canvas.parentNode.style.height = '430px';
                     } else if(GraphicObj.graphics_size.includes(canv_id)) {
                         graphic.canvas.parentNode.style.height = '268px';
@@ -122,17 +121,13 @@ var GraphicObj = {
                 var legend_active = true
                 var type_graph = "bar";
                
-                if(generic == "editions_comparative" && graphic == "sales_last_editions_cumulative" || generic != "editions_comparative") {
+                if(generic == "teste") {
                     type_graph = "line";
                 }
 
                 //Informações do rodapé
 
                 const footer = (tooltipItems) => {
-
-                    if(generic != "editions_comparative") {
-                        return false;
-                    }
 
                     let total_base = percent_c1 = percent_c2 = 0;
                    
@@ -167,94 +162,6 @@ var GraphicObj = {
                 const label = (tooltipItems, data) => {
                     return conteudo = tooltipItems.dataset.label+": "+tooltipItems.formattedValue;
                 };
-
-                /* filter: (legendItem: LegendItem) => {
-                    console.log(legendItem);
-                    return legendItem.index < 2
-                },*/
-
-                //Informações da estrutura
-               
-                if(graphic == "clients_age" || graphic == "clients_city" || graphic == "payment_type" || 
-                    graphic == "payment_origin" || graphic == "payment_gateway") {
-                    window["chart_"+graphic] = new Chart($section, {
-                        type: "doughnut", 
-                        data: data, 
-                        options: {
-                            plugins: {
-                                legend: { 
-                                    display: legend_active, 
-                                    position: "right", 
-                                    align: "start" 
-                                }
-                            },
-                            tooltips: {
-                                callbacks: {
-                                    label: label, 
-                                    title: function(tooltipItem, data) {
-                                       
-                                        var data_index = tooltipItem[0].index;
-                                        var data_label = data.labels[data_index];
-
-                                        return data_label;
-                                    }
-                                }
-                            },
-                            responsive: true,
-                            maintainAspectRatio: false 
-                        }
-                    });
-                } else if(graphic == "sales_on_day" || graphic == "sales_for_day" || graphic == "sales_for_day_period" || 
-                            graphic == "sales_for_edition" || graphic == "sales_last_editions_cumulative" || graphic == "registers_week_active" || 
-                            graphic == "sales_last_editions" || graphic == "sales_for_hour_editions") {
-                    window["chart_"+graphic] = new Chart($section, {
-                        type: type_graph, 
-                        data: data, 
-                        options: {
-                            interaction: {
-                                mode: 'index',
-                                intersect: false
-                            },
-                            plugins: {
-                                tooltip: {
-                                    callbacks: {
-                                        label: label,
-                                        footer: footer
-                                    }
-                                }
-                            },
-                            scales: {
-                                x: {
-                                    id: 'x',
-                                    grid: { display: false }
-                                }
-                            },
-                            responsive: true, maintainAspectRatio: false
-                        }
-                    });
-                } else if(graphic == "sales_at_the_time") {
-                    var opts = {
-                        angle: -0.2,
-                        lineWidth: 0.2,
-                        radiusScale: 1,
-                        pointer: { length: 0.5, strokeWidth: 0.040, color: '#000000' },
-                        staticZones: data.static,
-                        staticLabels: {
-                            font: "13px sans-serif",
-                            labels: data.labels,
-                            color: "#607077",
-                        }
-                    };
-
-                    var target = document.getElementById(graphic);
-                    var gauge  = new Gauge(target).setOptions(opts);
-                    
-                    gauge.maxValue = data.static[4].max;
-                    gauge.setMinValue(0);
-                    gauge.animationSpeed = 10;
-                    gauge.setTextField(document.getElementById("gauge-value"));
-                    gauge.set(data.actual);
-                }
             }
         });
     },

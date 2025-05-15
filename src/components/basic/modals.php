@@ -76,7 +76,7 @@
         </div>
     </div>
 
-    <?php if($page_url == "index" or $page_url == "clients" or $page_url == "schedules") { ?>
+    <?php if($page_url == "index" or $page_url == "teste" or $page_url == "schedules") { ?>
         <div class="modal fade event-form-modal" role="dialog" tabindex="-1" aria-hidden="true" id="event_modal">
             <div class="modal-dialog modal-xxg" role="document">
                 <div class="modal-content">
@@ -87,7 +87,7 @@
                     <div class="modal-body">
                         <div class="row g-2 pb-2 content-container">
                             <div class="col-md-3">
-                                <div class="bg-white mx-1 rounded content-clients">
+                                <div class="bg-white mx-1 rounded content-teste">
 
                                 </div>
                             </div>
@@ -215,7 +215,7 @@
                     <div class="modal-body">
                         <div class="row g-2 pb-2 content-container">
                             <div class="col-md-4">
-                                <div class="bg-white mx-1 rounded content-clients">
+                                <div class="bg-white mx-1 rounded content-teste">
 
                                 </div>
                             </div>

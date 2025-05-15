@@ -660,6 +660,7 @@
     function proccessError($data_post) {
         $array_errors = array();
 
+        if(!isset($data_post["idAgenciador"])) { $array_errors[] = ["message" => "Selecione o Produto", "field" => "idAgenciador"]; }
         if(!isset($data_post["user"])) { $array_errors[] = ["message" => "Preencha o campo Usuário", "field" => "user"]; }
         if(!isset($data_post["pass"])) { $array_errors[] = ["message" => "Preencha o campo Senha", "field" => "pass"]; }
 
@@ -679,8 +680,6 @@
       
         $sql_data_user = $GenericService->getUser($data_post);
         
-        $label_msg_error = "Usuário ou senha incorretos";
-
         if($sql_data_user["query"]) {
             $sql_data_permission = $GenericService->getPermission($sql_data_user["query"]["id"], $data_post["idAgenciador"]);
 
@@ -720,13 +719,13 @@
                     return ["method" => "login", "url" => "index", "error" => false, "statusCode" => 200];
 
                 } else {
-                    return ["message" => "$label_msg_error. Por favor, tente novamente!", "error" => true, "statusCode" => 400];
+                    return ["message" => "Usuário ou senha incorretos. Por favor, tente novamente!", "error" => true, "statusCode" => 400];
                 } 
             } else {
                 return ["message" => "Não autorizado Usuário / Produto!", "error" => true, "statusCode" => 400];
             }
         } else {
-            return ["message" => "$label_msg_error. Por favor, tente novamente!", "error" => true, "statusCode" => 400];
+            return ["message" => "Usuário ou senha incorretos. Por favor, tente novamente!", "error" => true, "statusCode" => 400];
         }     
     }
 

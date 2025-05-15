@@ -90,18 +90,6 @@ function prepareToRenderBadgesHeader(action = "apply") {
                 
         $.getJSON("functions/generic_ajax.php?action=get_header_page&url_page="+generic)
         .done(function(data) {
-            if(generic == "clients") {
-                var agent_id = generic == "clients" ? $("[name='idAgenciadorCliente']").find(":selected").val() : $("[name='idAgenciador']").find(":selected").val();
-                var agent_filter = localStorage.getItem("idAgentFilter");
-
-                if(agent_filter != agent_id) {
-                    if(data.header.icon_rel) { $(".dropdown-reports").load("components/basic/icons_report.php?revalidate=true&url="+generic); }
-                    if(data.header.icon_config) { $(".dropdown-configs").load("components/basic/icons_setting.php?revalidate=true&url="+generic); }
-    
-                    localStorage.setItem("idAgentFilter", agent_id);
-                }
-            }
-
             if(list_filter.includes("agent")) {
                 prepareToRenderAgent(data);
             }

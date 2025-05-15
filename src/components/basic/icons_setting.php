@@ -10,7 +10,7 @@
         $page_url = $_GET["url"];
     }
 
-    $agent_id = ($page_url == "clients" and isset($_SESSION["agent_client"])) ? $_SESSION["agent_client"]["id"] : false;
+    $agent_id = ($page_url == "teste" and isset($_SESSION["agent_client"])) ? $_SESSION["agent_client"]["id"] : false;
 ?>
 
 <?php if(count(SETTINGS[$page_url]) > 0) { ?>
